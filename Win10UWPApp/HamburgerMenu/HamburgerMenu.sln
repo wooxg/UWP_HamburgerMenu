@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HamburgerMenu", "HamburgerMenu\HamburgerMenu.csproj", "{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Debug|ARM.ActiveCfg = Debug|ARM
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Debug|ARM.Build.0 = Debug|ARM
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Debug|ARM.Deploy.0 = Debug|ARM
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Debug|x64.ActiveCfg = Debug|x64
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Debug|x64.Build.0 = Debug|x64
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Debug|x64.Deploy.0 = Debug|x64
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Debug|x86.ActiveCfg = Debug|x86
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Debug|x86.Build.0 = Debug|x86
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Debug|x86.Deploy.0 = Debug|x86
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Release|ARM.ActiveCfg = Release|ARM
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Release|ARM.Build.0 = Release|ARM
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Release|ARM.Deploy.0 = Release|ARM
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Release|x64.ActiveCfg = Release|x64
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Release|x64.Build.0 = Release|x64
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Release|x64.Deploy.0 = Release|x64
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Release|x86.ActiveCfg = Release|x86
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Release|x86.Build.0 = Release|x86
+		{DEC5017E-5FC5-480C-9AF9-D8071B4978DE}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
