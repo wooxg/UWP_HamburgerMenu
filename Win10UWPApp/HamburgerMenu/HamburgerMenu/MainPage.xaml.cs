@@ -25,11 +25,46 @@ namespace HamburgerMenu
         public MainPage()
         {
             this.InitializeComponent();
+            var coreTitleBar = Windows.ApplicationModel.Core.CoreApplication.GetCurrentView().TitleBar;
+            coreTitleBar.ExtendViewIntoTitleBar = true;
+            Window.Current.SetTitleBar(BarGrid);
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
+            if(MySplitView.IsPaneOpen)
+            {
+                MySplitView.OpenPaneLength = MySplitView.CompactPaneLength;
+            }
+            else
+            {
+                MySplitView.OpenPaneLength = 150;
+            }
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+
+        private void MenuListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var menuListBox = sender as ListBox;
+            if(menuListBox != null)
+            {
+                if(menuListBox.SelectedItem == HomeMenu)
+                {
+                    ContentFrame.Navigate(typeof(HomePage));
+                }
+                else if(menuListBox.SelectedItem == FavoriteMenu)
+                {
+                    ContentFrame.Navigate(typeof(FavoritePage));
+                }
+            }
+        }
+
+        private void GoBackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(ContentFrame.CanGoBack)
+            {
+                ContentFrame.GoBack();
+            }
         }
     }
 }

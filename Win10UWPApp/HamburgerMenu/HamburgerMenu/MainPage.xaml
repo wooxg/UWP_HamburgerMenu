@@ -10,42 +10,75 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <RelativePanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <RelativePanel Height="32" >
+                <Button Name="GoBackButton"
+                        Click="GoBackButton_Click"
+                        FontFamily="Segoe MDL2 Assets"
+                        FontSize="22"
+                        Content="&#xE0A6;"
+                        Width="50"
+                        Visibility="{Binding ElementName=ContentFrame, Path=CanGoBack}"/>
+            </RelativePanel>
+            <Grid Name="BarGrid"
+                  Grid.Column="1">
+                <TextBlock Text="Hamburger"/>
+            </Grid>
+        </Grid>
+        <RelativePanel Grid.Row="1">
             <Button Name="HamburgerButton"
                     FontFamily="Segoe MDL2 Assets"
                     FontSize="30"
                     Content="&#xE700;"
                     Click="HamburgerButton_Click"
-                    RelativePanel.AlignLeftWithPanel="True"></Button>
+                    RelativePanel.AlignLeftWithPanel="True"
+                    RelativePanel.AlignTopWithPanel="True"></Button>
+
         </RelativePanel>
         <SplitView Name="MySplitView"
-                   Grid.Row="1"
+                   Grid.Row="2"
                    DisplayMode="CompactInline"
                    CompactPaneLength="50"
-                   OpenPaneLength="150"
+                   OpenPaneLength="50"
                    HorizontalAlignment="Left">
             <SplitView.Pane>
-                <ListBox SelectionMode="Single">
+                <ListBox Name="MenuListBox"
+                         SelectionMode="Single"
+                         SelectionChanged="MenuListBox_SelectionChanged">
                     <ListBox.Items>
-                        <ListBoxItem Name="home">
+                        <ListBoxItem Name="HomeMenu">
                             <ListBoxItem.Content>
-                                <StackPanel Orientation="Horizontal">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
                                     <TextBlock Name="IconTextBlock"
                                                FontFamily="Segoe MDL2 Assets"
                                                FontSize="30"
                                                TextAlignment="Center"
                                                Text="&#xE10F;"/>
-                                    <TextBlock Name="HomeTextBlock"
+                                    <TextBlock Grid.Column="1"
+                                               Name="HomeTextBlock"
                                                FontSize="24"
-                                               Margin="20,0,0,0"
+                                               Margin="22,0,0,0"
                                                TextAlignment="Center"
                                                Text="主页"/>
-                                </StackPanel>
+                                </Grid>
                             </ListBoxItem.Content>
                         </ListBoxItem>
-                        <ListBoxItem Name="Favorite">
+                        <ListBoxItem Name="FavoriteMenu">
                             <ListBoxItem.Content>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Name="FIconTextBlock"
@@ -55,7 +88,7 @@
                                                Text="&#xE24A;"/>
                                     <TextBlock Name="FavoriteTextBlock"
                                                FontSize="24"
-                                               Margin="20,0,0,0"
+                                               Margin="22,0,0,0"
                                                Text="收藏"/>
                                 </StackPanel>
                             </ListBoxItem.Content>
@@ -64,5 +97,13 @@
                 </ListBox>
             </SplitView.Pane>
         </SplitView>
+        <Grid Grid.Column="1"
+              Grid.Row="1"
+              Grid.RowSpan="2"
+              Background="AliceBlue">
+            <Frame Name="ContentFrame">
+                
+            </Frame>
+        </Grid>
     </Grid>
 </Page>
